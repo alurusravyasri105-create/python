@@ -151,5 +151,82 @@ password = ""
 while password != "python123":
     password = input("enter password:")
 
-print("login successful")    
+print("login successful")  
+
+#count the number of digits in a number
+number = int(input("enter number:"))
+count = 0
+
+while number > 0:
+    number = number // 10
+    count = count + 1
+
+print("number of digits:",count)  
+
+#sum of digits in a number
+number = int(input("enter number:"))
+
+total = 0
+
+while number >0:
+    digit = number % 10
+    total = total + digit
+    number = number // 10
+
+print("sum of digits:",total)  
+
+#reverse the number
+number = int(input("enter number:"))
+
+reverse = 0
+
+while number >0:
+    digit = number % 10
+    number = number //10
+    reverse = reverse * 10 + digit
+
+    print("reverse:",reverse)
+
+#check if a number is a palindrome
+number = int(input("enter number:"))
+
+original = number
+reverse = 0
+
+while number > 0:
+    digit = number % 10
+    reverse = reverse * 10 + digit
+    number = number // 10
+
+if original == reverse:
+    print("palindrome")
+else:
+    print("not palindrome")    
+
+#check if a number is prime number
+number = int(input("enter number:"))
+
+count = 0
+
+for i in range(1, number + 1):
+    if number % i == 0:
+        count = count + 1
+
+if count == 2: 
+    print("prime number")
+else:
+    print("not a prime number") 
+
+             
+# Print all prime numbers between 2 and 100
+for number in range(2, 101):
+
+    count = 0
+
+    for i in range(1, number + 1):
+        if number % i == 0:
+            count = count + 1
+
+    if count == 2:
+        print(number)
 
