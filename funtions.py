@@ -141,7 +141,90 @@ def find_grade(marks):
 
 marks = int(input("enter marks:"))
 
-print("grade =",find_grade(marks))
+print("grade =",find_grade(marks)) 
+
+#sum of 1 to N
+def sum_n(num):
+    total = 0
+
+    for i in range(1,num + 1):
+        total += i
+
+    return total
+
+n = int(input("enter n:"))
+
+print("sum =",sum_n(n))
+
+#factorial of a number
+def factorial(n):
+    result = 1
+
+    for i in range(1, n = 1):
+        result *= i
+
+        return result
+
+    n = int(input("enter a number:"))
+
+    print("factorial =", factorial(n))
+
+#sum of digits
+def sum_digits(n):
+    total = 0
+
+    while n > 0:
+        digit = n % 10
+        total += digit
+        n //= 10
+
+    return total
+
+num = int(input("enter a number:"))
+
+print("sum of digits =", sum_digits(num))
+
+#palindrome
+def is_palindrome(n):
+    original = n
+    reverse = 0
+
+    while n > 0:
+        digit = n % 10
+        reverse = reverse * 10 + digit
+        n //= 10
+
+    if original == reverse:
+        return True
+    else:
+        return False
+
+num = int(input("enter a number:"))
+
+if is_palindrome(num):
+    print("palindrome")
+else:
+    print("not palindrome")    
+
+#prime number check
+def is_prime(n):
+    if n < 2:
+        return False
+
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+
+    return True
+
+num = int(input("enter a number:"))
+
+if is_prime(num):
+    print("prime")
+else:
+    print("not prime")    
+    
+
 
 
 
